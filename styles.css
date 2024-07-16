@@ -16,6 +16,95 @@ body{
     justify-content: center;
     font-weight: 600;
     font-size: 1.5rem;
+    position: absolute;
+    cursor: default;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.hidden-letters {
+    font-weight: 600;
+    font-size: 1.5rem;
+    position: absolute;
+    z-index: -1;
+    cursor: default;
+    -webkit-user-select: none;
+    user-select: none;
+    animation: wiggle .1s ease infinite;
+}
+
+.hidden-letters > .hidden-letter {
+    display: none;
+    position: absolute;
+}
+
+.hidden-letters > .skills-highlight#I {
+    right: 10px;
+    transform: rotate(15deg);
+}
+
+.hidden-letters > .skills-highlight#L {
+    top: 65px;
+    left: 85px;
+    transform: rotate(45deg);
+}
+
+.hidden-letters > .skills-highlight#S {
+    top: 90px;
+    left: 90px;
+    transform: rotate(-25deg);
+}
+
+.hidden-letters > .experiences-highlight#E1 {
+    top: 120px;
+    right: 150px;
+    transform: rotate(15deg);
+}
+
+.hidden-letters > .experiences-highlight#X {
+    top: 115px;
+    right: 120px;
+    transform: rotate(-10deg);
+}
+
+.hidden-letters > .experiences-highlight#P {
+    top: 80px;
+    right: 120px;
+    transform: rotate(-5deg);
+}
+
+.hidden-letters > .experiences-highlight#E2 {
+    top: 45px;
+    right: 95px;
+    transform: rotate(8deg);
+}
+
+.hidden-letters > .experiences-highlight#E3 {
+    bottom: 60px;
+    transform: rotate(10deg);
+}
+
+.hidden-letters > .experiences-highlight#N {
+    bottom: 65px;
+    left: 50px;
+    transform: rotate(18deg);
+}
+
+.hidden-letters > .experiences-highlight#C {
+    bottom: 40px;
+    left: 100px;
+    transform: rotate(-10deg);
+}
+
+.hidden-letters > .experiences-highlight#E4 {
+    bottom: 20px;
+    left: 100px;
+    transform: rotate(-19deg);
+}
+
+.hidden-letters > .experiences-highlight#S {
+    left: 120px;
+    transform: rotate(25deg);
 }
 
 .static-title > .letter-outer {
@@ -73,6 +162,15 @@ body{
 
 .static-title:hover > .letter-outer:nth-child(12) {
     transform: translate(50%, 45%) rotate(12deg);
+}
+
+/* highlights */
+.static-title:has(.skills-highlight:hover) .letter-inner:not(.skills-highlight){
+    opacity: .2;
+}
+
+.static-title:has(.experiences-highlight:hover) .letter-inner:not(.experiences-highlight){
+    opacity: .2;
 }
 
 
