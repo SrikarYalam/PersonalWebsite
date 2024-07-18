@@ -25,17 +25,17 @@ body{
 .hidden-letters {
     font-weight: 600;
     font-size: 1.5rem;
-    position: absolute;
     z-index: -1;
+    position: absolute;
     cursor: default;
     -webkit-user-select: none;
     user-select: none;
-    animation: wiggle .1s ease infinite;
 }
 
 .hidden-letters > .hidden-letter {
     display: none;
     position: absolute;
+    overflow: hidden;
 }
 
 .hidden-letters > .skills-highlight#I {
@@ -107,6 +107,46 @@ body{
     transform: rotate(25deg);
 }
 
+.hidden-letters > .projects-highlight#P {
+    right: 20px;
+    transform: rotate(25deg);
+}
+
+.hidden-letters > .projects-highlight#O {
+    right: 20px;
+    top: 80px;
+    transform: rotate(25deg);
+}
+
+.hidden-letters > .projects-highlight#J {
+    right: 60px;
+    top: 105px;
+    transform: rotate(-25deg);
+}
+
+.hidden-letters > .projects-highlight#E {
+    right: 30px;
+    top: 120px;
+    transform: rotate(40deg);
+}
+
+.hidden-letters > .projects-highlight#C {
+    top: 140px;
+    transform: rotate(-15deg);
+}
+
+.hidden-letters > .projects-highlight#T {
+    top: 130px;
+    left: 40px;
+    transform: rotate(25deg);
+}
+
+.hidden-letters > .projects-highlight#S {
+    top: 100px;
+    left: 80px;
+    transform: rotate(-25deg);
+}
+
 .static-title > .letter-outer {
     transition: transform 200ms ease;
 }
@@ -165,11 +205,27 @@ body{
 }
 
 /* highlights */
+.static-title:has(.skills-highlight:hover) .skills-highlight {
+    animation: none;
+}
+
+.static-title:has(.experiences-highlight:hover) .experiences-highlight {
+    animation: none;
+}
+
+.static-title:has(.projects-highlight:hover) .projects-highlight {
+    animation: none;
+}
+
 .static-title:has(.skills-highlight:hover) .letter-inner:not(.skills-highlight){
     opacity: .2;
 }
 
 .static-title:has(.experiences-highlight:hover) .letter-inner:not(.experiences-highlight){
+    opacity: .2;
+}
+
+.static-title:has(.projects-highlight:hover) .letter-inner:not(.projects-highlight){
     opacity: .2;
 }
 

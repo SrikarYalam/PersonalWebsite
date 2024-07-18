@@ -24,14 +24,8 @@ for (const possibleHighlight of allPossibleHighlights) {
         highlight.addEventListener("mouseover", () => {
             for (const hiddenSkillsLetter of hiddenLetters) {
                 hiddenSkillsLetter.style.display = "inline-block";
-                for (const hl of highlights)
-                {
-                    if (hl.className == highlight.className)
-                    {
-                        hl.style.animation = 'wiggle .1s infinite';
-                    }
-                }
             }
+            const innerHiddenLetters = document.getElementsByClassName("inner-hidden-letter");
         })
         highlight.addEventListener("mouseout", () => {
             for (const hiddenSkillsLetter of hiddenLetters) {
