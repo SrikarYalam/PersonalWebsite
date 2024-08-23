@@ -1,0 +1,15 @@
+html {
+    cursor: url('custom-cursor.svg'), auto;
+}
+
+.circle {
+    --circle-size: 25px;
+    position: fixed;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    border: 1px solid black;
+    border-radius: 100%;
+    top: calc(var(--circle-size) / -2);
+    left: calc(var(--circle-size) / -2);
+    pointer-events: none;
+}
