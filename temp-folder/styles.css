@@ -15,7 +15,7 @@ body{
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 2rem;
     position: absolute;
     cursor: default;
     -webkit-user-select: none;
@@ -24,7 +24,7 @@ body{
 
 .hidden-letters {
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 2rem;
     z-index: -1;
     position: absolute;
     cursor: default;
@@ -232,11 +232,11 @@ body{
 
 /* Animations */
 @keyframes wiggle {
-    from, to {
+    /* from, to {
       transform: translateY(0%)
     }
     
-    50% {    
+    50% {
       transform: translateY(-5%)
-    }
+    } */
 }
